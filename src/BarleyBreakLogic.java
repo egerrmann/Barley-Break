@@ -35,4 +35,17 @@ public class BarleyBreakLogic {
         numbers[row][col + 1] = numbers[row][col];
         numbers[row][col] = 0;
     }
+
+    public boolean gameIsCompleted() {
+        int coincidences = 0;
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (numbers[i][j] == 4 * i + (j + 1))
+                    coincidences++;
+            }
+        }
+
+        return coincidences == 15;
+    }
 }

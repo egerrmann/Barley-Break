@@ -92,6 +92,12 @@ public class GUI {
 
             iterations++;
         }
+
+        if (barleyBreak.gameIsCompleted())
+            JOptionPane.showMessageDialog(new JFrame(),
+                    "Game is completed!",
+                    "Congratulations!",
+                    JOptionPane.INFORMATION_MESSAGE);
     }
 
     public void addMouseListener() {
